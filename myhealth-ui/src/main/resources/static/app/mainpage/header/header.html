@@ -1,0 +1,80 @@
+<div id="legal-top-bar">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-6">
+				<ul id="legal-top-menu" class="list-inline">
+					<li id="terms-top"><a class="first" href="#">Terms</a></li>
+					<li id="privacy-top"><a href="#">Privacy Policy</a></li>
+					<li id="legal-agreement-top"><a href="#">Legal Agreement</a></li>
+				</ul>
+			</div>
+			<div class="col-xs-6 text-right">
+				<span class="fa fa-USER-CIRCLE"></span>
+				{{currentUser}}
+				<a ng-click="logout()">Logout</a>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="main-top-menu">
+	<div id="header">
+		<div class="container-fluid navbar">
+			<div id="logo">
+				<a href="/" title="My Health">
+					<img class="normal_logo" src="images/logo.png" alt="My Health" title="My Health">
+				</a>
+			</div>
+
+			<div id="main-menu">
+				<ul id="menu-main-menu" class="menu">
+					<li id="home-menu-item"
+						class="menu-item
+						menu-item-type-post_type
+						menu-item-object-page
+						page_item
+						menu-item-depth-0
+						menu-item-simple-parent "
+						ui-sref-active="current_page_item current-menu-item">
+						<a  ui-sref="protected.home">Home</a><span class="arrow"> </span>
+					</li>
+					<li id="profile-menu-item"
+						class="menu-item
+						menu-item-type-post_type
+						menu-item-object-page
+						page_item
+						menu-item-depth-0
+						menu-item-simple-parent"
+						ui-sref-active="current_page_item current-menu-item" >
+						<a ui-sref="protected.profile">Profile</a><span class="arrow"> </span>
+					</li>
+					<li id="appointments-menu-item"
+						class="menu-item
+						menu-item-type-post_type
+						menu-item-object-page
+						menu-item-depth-0
+						menu-item-simple-parent"
+						ui-sref-active="current_page_item current-menu-item">
+						<a ui-sref="protected.appointments">Appointments</a><span class="arrow"> </span></li>
+					<li id="medication-menu-item"
+						class="menu-item
+						menu-item-type-post_type
+						menu-item-object-page
+						menu-item-depth-0
+						menu-item-simple-parent"
+						ui-sref-active="current_page_item current-menu-item">
+						<a ui-sref="protected.medications">Medications</a><span class="arrow"> </span></li>
+					<li id="emergency-data-menu-item"
+						class="menu-item
+						menu-item-type-post_type
+						menu-item-object-page
+						menu-item-depth-0
+						menu-item-simple-parent"
+						ui-sref-active="current_page_item current-menu-item">
+						<a ui-sref="protected.emergency-data">Emergency data</a><span class="arrow"> </span></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,13 @@
+
+	<div class="row" ng-include="'app/mainpage/header/header.html'"></div>
+	<div id="main-wrapper" class="row min-height-55">
+		<div id="main" class="container-fluid">
+			<div id="primary" class="row">
+				<div class="col-xs-3" ng-include="'app/mainpage/center/usernavbar/usernavbar.html'"></div>
+				<div class="col-xs-9">
+					<div ui-view="content"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row" ng-include="'app/mainpage/footer/footer.html'"></div>

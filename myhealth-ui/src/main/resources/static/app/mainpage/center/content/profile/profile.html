@@ -1,0 +1,60 @@
+<form>
+	<p>Please fill you personal data here!</p>
+	<div class="form-group">
+		<div class="row">
+			<div class="col-xs-4">
+				<div class="input-group dt-sc-team">
+					<label for="name">Name</label>
+					<input class="form-control left-border-none input-with-icon"
+						   placeholder="Name" type="text"
+						   name="name"
+						   id="name"
+						   ng-model="profile.name">
+				</div>
+			</div>
+			<div class="col-xs-4">
+				<div class="input-group dt-sc-team">
+					<label for="surname">Surname</label>
+					<input class="form-control left-border-none input-with-icon"
+						   placeholder="Surname" type="text"
+						   id="surname"
+						   name="surname"
+						   ng-model="profile.surname">
+				</div>
+			</div>
+		</div>
+		<div>
+			<label>Gender</label>
+			<label class="radio-inline"><input type="radio" ng-model="profile.gender" value="MALE">Male</label>
+			<label class="radio-inline"><input type="radio" ng-model="profile.gender" value="FEMALE">Female</label>
+		</div>
+
+	</div>
+	<div class="form-group row">
+		<div class="col-xs-4">
+			<label>Date of birth</label>
+			<div class="form-group">
+				<div class="input-group dt-sc-team">
+					<input class="form-control left-border-none input-with-icon"
+						   placeholder="Date of birth"
+						   type="text"
+						   is-open="birthDatePopup.opened"
+						   uib-datepicker-popup="dd-MMMM-yyyy"
+						   name="birthdate"
+						   id="birthdate"
+						   ng-model="profile.dateOfBirth">
+					<span class="input-group-addon transparent icon-attached">
+						<i class="fa fa-calendar" ng-click="openBirthDatePopup()"></i>
+					</span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-xs-6">
+			<a id="save-btn" class="dt-sc-button medium pull-left" ng-click="save()">Save profile</a>
+		</div>
+	</div>
+</form>
+

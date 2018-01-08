@@ -1,0 +1,50 @@
+<div id="login-form-wrapper" class="container">
+    <form name="registrationForm" novalidate>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4>Register</h4>
+            </div>
+
+            <div class="panel-body">
+                <p>Register here for your My Health account. With My Health you can easily manage your health status.
+                    Anywhere and anytime!</p>
+                <div class="form-group">
+                    <div class="input-group dt-sc-team"
+                         ng-class="{ 'has-error' : registrationForm.email.$dirty && registrationForm.email.$invalid }">
+                        <span class="input-group-addon transparent icon-attached"><i class="fa fa-envelope"></i></span>
+                        <input type="email"
+                               name="email"
+                               class="form-control left-border-none input-with-icon"
+                               ng-model="registration.email"
+                               placeholder="Enter a valid email address"
+                               required>
+                    </div>
+                    <span style="color:red"
+                          ng-show="registrationForm.email.$dirty && registrationForm.email.$invalid">
+						  <span ng-show="registrationForm.email.$error.required">Email address is required.</span>
+						  <span ng-show="registrationForm.email.$error.email">Email address is not valid.</span>
+						  <span ng-show="registrationForm.email.$error.sendFailed">Email cannot be send.</span>
+                    </span>
+                    <span style="color:green"
+                          ng-show="registerSuccess">
+						  <span>Registration Successful!.</span>
+                    </span>
+
+                </div>
+                <a id="registration-btn" class="dt-sc-button medium pull-right" name="registration" type="submit"
+                   ng-click="register()">Register</a>
+            </div>
+
+            <div class="panel-footer">
+                <div class="row">
+                    <div class="col-xs-2"></div>
+                    <div class="col-xs-10">
+                        Already have an account?
+                        <a ui-sref="login">Login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </form>
+</div>

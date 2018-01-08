@@ -1,0 +1,62 @@
+<div>
+	<form>
+		<div class="form-group row">
+			<div class="col-xs-2">
+				<label>Date</label>
+				<div class="form-group">
+					<div class="input-group dt-sc-team">
+						<input class="form-control left-border-none input-with-icon"
+							   placeholder="Date"
+							   type="text"
+							   is-open="datePopup.opened"
+							   uib-datepicker-popup="dd-MMMM-yyyy"
+							   name="noteDate"
+							   id="noteDate"
+							   ng-model="note.date">
+						<span class="input-group-addon transparent icon-attached">
+						<i class="fa fa-calendar" ng-click="openDatePopup()"></i>
+					</span>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-2">
+				<label>Time</label>
+				<uib-timepicker ng-model="note.time" show-meridian="ismeridian">
+
+				</uib-timepicker>
+			</div>
+			<div class="col-xs-4">
+				<div class="input-group dt-sc-team">
+					<label for="noteText">Note</label>
+					<textarea class="form-control left-border-none input-with-icon"
+						   placeholder="Note" type="string"
+						   name="noteText"
+						   id="noteText"
+						   ng-model="note.text">
+					</textarea>
+				</div>
+			</div>
+
+		</div>
+		<div class="row">
+			<div class="col-xs-6">
+				<a id="bp-save-btn" class="dt-sc-button medium pull-left" ng-click="save()">Save</a>
+			</div>
+		</div>
+	</form>
+	<br/>
+	<div>
+		<table>
+			<thead>
+			<th>Date</th>
+			<th>Note</th>
+			</thead>
+			<tbody>
+			<tr ng-repeat="note in notes">
+				<td>{{note.date | jsDate | date:'yyyy-MM-dd HH:mm'}}</td>
+				<td>{{note.text}}</td>
+			</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html ng-app="myHealthApp">
+<head>
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>My Health</title>
+
+	<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="app/app.css"/>
+	<link rel="stylesheet" href="lib/font-awesome-4.7.0/css/font-awesome.css"/>
+
+	<script type="text/javascript" src="lib/angularjs/angular.js"></script>
+	<script type="text/javascript" src="lib/angularjs/angular-ui-router.js"></script>
+	<script type="text/javascript" src="lib/angularjs/angular-resource.min.js"></script>
+	<script type="text/javascript" src="lib/angularjs/angular-cookies.js"></script>
+	<script type="text/javascript" src="lib/angularjs/angular-sanitize.js"></script>
+	<script type="text/javascript" src="lib/angularjs/angular-translate.min.js"></script>
+	<script type="text/javascript" src="lib/angularjs/angular-translate-loader-static-files.js"></script>
+	<script type="text/javascript" src="lib/angularjs/angular-translate-handler-log.js"></script>
+	<script type="text/javascript" src="lib/angularjs/angular-messages.js"></script>
+	<script type="text/javascript" src="lib/angularjs/angular-animate.js"></script>
+	<script type="text/javascript" src="lib/angularjs/dirPagination.js"></script>
+	<script type="text/javascript" src="lib/angularjs/ng-file-upload/ng-file-upload-shim.js"></script>
+	<script type="text/javascript" src="lib/angularjs/ng-file-upload/ng-file-upload.js"></script>
+	<script type="text/javascript" src="lib/angularjs/angular-jwt.js"></script>
+	<script type="text/javascript" src="lib/angularjs/angular-storage.js"></script>
+
+	<script type="text/javascript" src="lib/ui-bootstrap/ui-bootstrap-tpls-1.3.3.js"></script>
+
+	<script type="text/javascript" src="app/app.js"></script>
+	<script type="text/javascript" src="app/content/registration/registration-controller.js"></script>
+	<script type="text/javascript" src="app/content/registration/registration-service.js"></script>
+	<script type="text/javascript" src="app/content/login/login-service.js"></script>
+	<script type="text/javascript" src="app/content/login/login-controller.js"></script>
+	<script type="text/javascript" src="app/content/dashboard/dashboard-controller.js"></script>
+	<script type="text/javascript" src="app/content/activation/activation-controller.js"></script>
+	<script type="text/javascript" src="app/content/restore-password/forgot-password-controller.js"></script>
+	<script type="text/javascript" src="app/content/restore-password/reset-password-controller.js"></script>
+	<script type="text/javascript" src="app/auth/auth-service.js"></script>
+
+	<script type="text/javascript" src="app/mainpage/center/content/profile/profile-controller.js"></script>
+	<script type="text/javascript" src="app/mainpage/center/content/measurements/measurements-controller.js"></script>
+	<script type="text/javascript" src="app/mainpage/center/content/measurements/weight-measurements-controller.js"></script>
+	<script type="text/javascript" src="app/mainpage/center/content/measurements/height-measurements-controller.js"></script>
+	<script type="text/javascript" src="app/mainpage/center/content/measurements/bp-measurements-controller.js"></script>
+	<script type="text/javascript" src="app/mainpage/center/content/notes/notes-controller.js"></script>
+	<script type="text/javascript" src="app/mainpage/center/content/ihealth/ihealth-import-controller.js"></script>
+
+</head>
+
+<body>
+
+<div ui-view  id="main-container" class="container-fluid full-height"></div>
+</body>
+
+</html>
